@@ -1,0 +1,56 @@
+<txp:hide>
+Set how many article cards to display on front pages:
+</txp:hide>
+
+<txp:variable name="cards_nb" value="12" />
+
+<txp:hide>
+Set you Twitter account to allow comments (i.e. @jack), desabled if blank:
+</txp:hide>
+
+<txp:variable name="twitter" value="" />
+
+<txp:hide>
+Display a placeholder image for article cards with no pics (true or false)?
+</txp:hide>
+
+<txp:variable name="placeholder" value="true" />
+
+<txp:hide>
+Set your e-mail address for encryption (you could call it into an article by using this TXP variable):
+</txp:hide>
+
+<txp:variable name="email" value="recipient@example.com" />
+
+<txp:hide>
+Set your phone number for encryption (you could call it into an article by using this TXP variable):
+</txp:hide>
+
+<txp:variable name="phone" value="+33(0)601020304" />
+
+
+<txp:hide>
+DO NOT CHANGE ANYTHING BELOW
+</txp:hide>
+
+<txp:php>
+global $variable;
+/*!
+ * Simple function to encode email addresse and others
+ *
+ * @param  $e string
+ * @return    string Link with encoded ASCII string
+ */
+function encrypt($e) {
+	for ($i = 0; $i < strlen($e); $i++) { $output .= '&#'.ord($e[$i]).';'; }
+	return '<a href="mailto:'.$output.'">'.$output.'</a>';
+}
+
+if (null != $variable['email']) {
+	$variable['email'] = encrypt($variable['email']);
+}
+
+if (null != $variable['phone']) {
+	$variable['email'] = encrypt($variable['phone']);
+}
+</txp:php>

@@ -1,0 +1,127 @@
+<txp:php>
+global $pretext, $variable;
+/**
+ * Strip a text in a number of plain words followed by hyphens
+ */
+
+// Strip all HTML tags?
+$strip_html = true;
+
+if ($variable['no-tags'] == "1") {
+	$strip_html = true;
+}
+
+// Do not change anything below
+
+// Sanitize article.
+if (null != $variable['content']) {
+	$input = $variable['content'](array());
+} else {
+	$out = '';
+}
+
+
+if (null != $variable['content']) {
+	$length = $variable['length'];
+} else {
+	$length = 0;
+}
+$tag = '';
+
+// Strip tags, if desired.
+if ($strip_html) {
+	$tag = 'p';
+	if (get_pref('pat_speeder_compact')) {
+		// Strip all tags but add a space before ul tags only (for better display).
+		$input = strip_tags(preg_replace_callback(
+				'(<(ul|ol))',
+				function ($m) { return '&#160;'.$m[0]; }, $input
+				));
+	} else {
+		$input = strip_tags($input);
+	}
+}
+
+// Remove line breaks.
+$input = str_replace(array("\n", "\r"), '', $input);
+
+// Trim if longer than trim length.
+if (strlen($input) > $length) {
+	// Is there some final typo signs to keep?
+	if (in_array(substr($input, $length, 1), array(' ', '.', ',', ';', ':', '!', '?'))) {
+		$end = ' …';
+		// Create a paragraph, add hellips.
+		$out = tag(substr($input, 0, $length + 1).$end, $tag);
+	} else {
+		$end = ' […]';
+		// Troncate and add hellips.
+		$input = substr($input, 0, $length);
+		$out = tag(substr($input, 0, strrpos($input, ' ')).$end, $tag);
+	}
+} else {
+	// No need to trim, already shorter than trim length.
+	$out = tag($input, $tag);
+}
+
+$_section = (strlen($pretext['s']) < 3) ? $pretext['s'] : $variable['_lang'];
+
+switch ($_section) {
+
+	case 'default':
+		$more = 'Read more';
+		$variable['published_on'] = 'Published on';
+		$variable['modified_on'] = 'Modified on';
+		$variable['author'] = 'Author';
+		$variable['search'] = 'Write your search here';
+		$variable['tooltip'] = 'Write then press [Enter]';
+		$variable['search_title'] = 'Your Search Results';
+		break;
+	case 'fr':
+		$more = 'Lire la suite';
+		$variable['published_on'] = 'Publié le';
+		$variable['modified_on'] = 'modifié le';
+		$variable['author'] = 'Auteur';
+		$variable['search'] = 'Saisir votre recherche ici';
+		$variable['tooltip'] = 'Écrire puis touche [Entrée]';
+		$variable['search_title'] = 'Les résultats de votre recherche';
+		break;
+	case 'de':
+		$more = 'Weiterlesen';
+		$variable['published_on'] = 'Gepostet am';
+		$variable['modified_on'] = 'Modified on';
+		$variable['author'] = 'Autor';
+		$variable['search'] = 'Schreiben Sie hier Ihre Suche';
+		$variable['tooltip'] = 'Schreiben Sie und [Enter]';
+		$variable['search_title'] = 'Your Search Results';
+		break;
+	case 'es':
+		$more = 'Lee mas';
+		$variable['published_on'] = 'Publicado en';
+		$variable['modified_on'] = 'Modified on';
+		$variable['author'] = 'Autor';
+		$variable['search'] = 'Escribe tu búsqueda aquí';
+		$variable['tooltip'] = 'Escriba y luego presione [Entrar]';
+		$variable['search_title'] = 'Your Search Results';
+		break;
+	case 'zh':
+		$more = '阅读更多';
+		$variable['search'] = '在这里写你的搜索';
+		break;
+
+	default:
+		$more = 'Read more';
+		$variable['published_on'] = 'Published on';
+		$variable['modified_on'] = 'Modified on';
+		$variable['author'] = 'Author';
+		$variable['search'] = 'Write your search here';
+		$variable['tooltip'] = 'Write then press [Enter]';
+		$variable['search_title'] = 'Your Search Results';
+		break;
+
+}
+
+
+// Return
+echo( ($out ? $out.' <br /><span class="m"><a href="'.permlink(array()).'" class="d">'.$more.'</a>…</span>': '') );
+
+</txp:php>

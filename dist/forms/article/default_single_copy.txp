@@ -1,0 +1,25 @@
+<article class="cf cb">
+	<header class="cf">
+		<h2 class="lr tc"><txp:title /></h2>
+		
+	</header>
+
+	<div class="l">
+
+		<txp:if_article_image><div class="c z">
+			<figure class="b">
+				<picture class="s p"><txp:images break="">
+					<img src="<txp:image_url link='0' />" alt="<txp:image_info type='alt' />" class="p" /></txp:images>
+				</picture>
+				<figcaption><txp:image_info /></figcaption>
+			</figure>
+		</div></txp:if_article_image>
+
+		<div class="c<txp:if_article_image> z</txp:if_article_image>">
+
+			<txp:body />
+
+		</div>
+
+	</div>
+</article>
