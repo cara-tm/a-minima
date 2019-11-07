@@ -1,4 +1,4 @@
-# [\a mi.ni.ma\]
+# [\a mi.ni.ma\\]
 "_a simple Low Tech Blog theme for Textpattern CMS_"
 
 This theme tries to have less technological environment impacts: it uses a main dark color to reduice electric consomation on screens, no custom fonts but system ones instead, no social networks links, a recommandation to convert images to half tone versions (image files weight reduiced by half, never mind the formats), with native multilingual features without the help of plugins, Flexbox inside but with fallback for a pretty good cross-browsers support: Internet Explorer 7 minimum.
