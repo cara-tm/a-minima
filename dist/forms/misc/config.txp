@@ -2,19 +2,19 @@
 Set how many article cards to display on front pages:
 </txp:hide>
 
-<txp:variable name="cards_nb" value="12" />
+<txp:variable name="cards_nb" value="6" />
 
 <txp:hide>
 Set you Twitter account to allow comments (i.e. @jack), desabled if blank:
 </txp:hide>
 
-<txp:variable name="twitter" value="" />
+<txp:variable name="twitter" value="@jack" />
 
 <txp:hide>
 Display a placeholder image for article cards with no pics (true or false)?
 </txp:hide>
 
-<txp:variable name="placeholder" value="true" />
+<txp:variable name="placeholder" value="false" />
 
 <txp:hide>
 Set your e-mail address for encryption (you could call it into an article by using this TXP variable):
@@ -41,16 +41,20 @@ global $variable;
  * @param  $e string
  * @return    string Link with encoded ASCII string
  */
-function encrypt($e) {
+function encrypt($e, $type) {
 	for ($i = 0; $i < strlen($e); $i++) { $output .= '&#'.ord($e[$i]).';'; }
-	return '<a href="mailto:'.$output.'">'.$output.'</a>';
+	if ($type == 'email') {
+		return '<a href="mailto:'.$output.'">'.$output.'</a>';
+	} elseif ($type == 'phone') {
+		return '<a href="tel:'.$output.'">'.$output.'</a>';
+	}
 }
 
 if (null != $variable['email']) {
-	$variable['email'] = encrypt($variable['email']);
+	$variable['email'] = encrypt($variable['email'], 'email');
 }
 
 if (null != $variable['phone']) {
-	$variable['email'] = encrypt($variable['phone']);
+	$variable['phone'] = encrypt($variable['phone'], 'phone');
 }
 </txp:php>

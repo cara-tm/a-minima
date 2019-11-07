@@ -1,0 +1,166 @@
+<txp::config /><txp:variable name="front" escape="lower,trim">
+<txp:section_list limit="1" sort="on_frontpage desc" break=""><txp:evaluate query='string-length("<txp:section />") < 3'><txp:section /></txp:evaluate></txp:section_list>
+</txp:variable>
+
+<txp:section_list limit="10" break=""><txp:evaluate query='string-length("<txp:section />") < 3'><txp:evaluate query='<txp:variable name="section_nb" add />' /></txp:evaluate></txp:section_list>
+
+<txp:variable name="_lang"><txp:if_section name=""><txp:variable name="front" /><txp:else /><txp:evaluate query='string-length("<txp:section />") < 3'><txp:section exclude='<txp:variable name="front" />' /><txp:else /><txp:article_custom section='<txp:section />' limit="1" status="sticky"><txp:body escape="p,lower,trim" /><txp:variable name="force" value='<txp:body escape="p,lower,trim" />' /></txp:article_custom></txp:evaluate></txp:if_section></txp:variable>
+
+<txp:article_custom section='<txp:variable name="_lang" />' sort="Posted asc" limit="1">
+<txp:variable name="first_article" value='<txp:posted format="%Y" />' escape="trim" />
+</txp:article_custom><!DOCTYPE html>
+<html lang="<txp:variable name="_lang" />" dir="<txp:text item="lang_dir" />" class="">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="supported-color-schemes" content="light dark">
+<meta charset="utf-8">
+<title><txp:site_name /> <txp:site_slogan /></title>
+<txp:meta_description />
+<link rel="canonical" href="<txp:site_url />">
+<meta name="generator" content="Textpattern CMS">
+<!-- Blank favicon, change to reflect yours (Best free tool: https://realfavicongenerator.net/) -->
+<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon">
+
+<script>document.documentElement.className="js "+(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect?"nosvg":"svg");var arr=['article','aside','footer','figcaption','figure','header','nav','main','picture','section','small','template','time'];for(var i=0;i<arr.length;i++){document.createElement(arr[i]);};</script>
+
+<txp:section_list sort="name asc" break=""><txp:evaluate query='string-length("<txp:section />") < 3'>
+<link rel="alternate" hreflang="<txp:section />-<txp:section />" href="<txp:site_url /><txp:section />"></txp:evaluate></txp:section_list>
+<link rel="alternate" hreflang="x-default" href="<txp:site_url />">
+
+<style>html{scroll-behavior:smooth}@media screen and (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}html,body,figure,h1,h2,h3,h4,h5,h6,p{margin:0;padding:0;color:#fafafa;font-weight:normal;font-family:Georgia,serif}blockquote{margin:1em 0;padding-left:1em;border-left:2px solid #fafafa}blockquote p{font:normal italic normal larger/1.5 Georgia,serif}cite{margin:1em 0}ol,ul{list-style:disclosure-closed}.cf:before,.cf:after{content:' ';display:table}.cf:after,.cb{clear:both}.cf{*zoom:1}.di{display:inline}svg:not(:root){vertical-align:middle}body{background-color:#484d5d;text-align:center;color:#fafafa;font-family:'Liberation Sans',Arial,sans-serif}article,aside,footer,figcaption,figure,header,nav,main,picture,section,small{display:block}.wrapper{width:96%;max-width:76.937rem;max-width:76.937em;margin:1em auto;padding:1.1em 2%;text-align:left;*word-spacing:1px}@supports (width:1ch){.wrapper{width:auto;max-width:140ch;margin:auto;padding:2ch}}@media screen and (min-resolution:92dpi){.wrapper{max-width:220ch}}header{margin-bottom:1.5rem}header ul{display:table;display:flex;flex-direction:row;justify-content:center;width:100%;max-width:20em;margin:0 auto 1em;padding:0;list-style:none;font-size:medium}header nav ul{max-width:none;margin:0 0 1em}header li{display:inline-block;*float:left}header ul a{display:block;padding:1em;text-align:center;text-decoration:none}h1,h2,h3,h4,h5,h6{margin:.1em 0 1em;font-family:Georgia,serif}p,ul li{margin:0 0 1em;font:normal 300 normal 1.1em/1.6 Arial,sans-serif;hyphens:auto}ul li *{font-size: inherit}.lr{font-size:260%}.tc{text-align:center}.tr{text-align:right}.u{text-transform:uppercase}.g{color:#888}hr{margin:2em auto;border:1px solid #54596a}img{width:100%;height:auto;vertical-align:top;text-align:center;-ms-interpolation-mode:bicubic}picture{margin:0 auto}.p{position:relative}.p:after{content:' ';display:block;position:absolute;z-index:5;top:0;right:0;bottom:0;left:0;width:100%;height:inherit;background:rgba(255,255,255,0)}header a,a{color:#fafafa;text-decoration:none;outline:0}a:hover{text-decoration:underline}.a{text-decoration:underline}.b{display:block;margin:0 0 1em;padding:.5em}.h{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0 none}.x{font-style:normal}:lang(fr) .x{margin:0 0 0 0.35%}.footer .m{display:block;max-width:90%;margin:.5em auto}.m a{border:none;border-bottom:.55px solid;text-decoration:none}.r{float:right}.ic{display:inline-table;width:auto;padding:0 .45em;text-align:center;font-style:normal;border-radius:50%;-ms-border-raduis:none}svg i{font:normal normal normal 2em/1 sans-serif}.l{display:inline;display:flex;flex-direction:row;flex-wrap:wrap;margin-bottom:2em}.m,.m a,a.d{display:inline-block;margin:.2em 0;color:#333}.c{float:left;*display:inline;display:block;display:inline-block;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;flex-direction:column;flex-basis:100%;flex:1;align-self:flex-start;width:100%}.n{width:31.016%;margin:0 1% 1.5em}.n:not(.ie8){width:calc(31.3333333334%)}.v{float:left;width:70%;margin:0 15% 2em}.z{float:left;width:45%;margin-rght:1em;margin-left:1em}.i{width:94%;min-height:0%;padding:3% 3% 1.5em}.s{background:#fbfbfb;border:1px solid #eee;border:0 solid hsla(0,0%,0%,0);box-shadow:0 1px 2px rgba(0,0,0,0.03),0 2px 4px rgba(0,0,0,0.03),0 2px 4px rgba(0,0,0,0.03),0 2px 4px rgba(0,0,0,0.03),0 2px 4px rgba(0,0,0,0.03),0 1px 2px rgba(0,0,0,0.03)}.pg{width:10%;margin:2em 45% 0}.footer{float:left;clear:both;width:100%;margin:2em 0;text-align:center}@media screen and (min-width:600px) and (orientation:landscape){.l .n:nth-child(1n+0):first-child{max-width:31.34%}.l .n:last-of-type{max-width:31.34%}}@supports ((display:-webkit-flex) or (display:flex)){.c{float:none;width:auto}}@media screen and (max-width:600px){header h1.di{display:block;text-align:center}header ul{display:block;padding:0}.c:not(.ie8){flex:none;width:98%;margin-bottom:2em}.v{width:100%;margin:0 0}.z{margin-left:0}}@media screen and (max-width:800px) and (min-width:600px){html{font-size:1.9vw}}::selection{background-color:#fff888;color:#333}</style>
+
+<txp:feed_link flavor="atom" format="link" label="Atom" />
+<txp:feed_link flavor="rss" format="link" label="RSS" />
+
+</head>
+<body>
+
+<div class="wrapper">
+
+	<header>
+
+		<h1 class="di"><a rel="home" href="<txp:site_url />"><txp:site_name /></a></h1>
+
+		<span class="r" lang="en" style="margin:1em 0;color:#aaa;-ms-hyphens:auto;hyphens:auto"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><switch><g><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></g><foreignObject width="0" height="0" overflow="hidden"><i class="ic">ℹ</i></foreignObject></switch></svg> A “Low Tech” website with less technological environment impacts.</span>
+
+		<section>
+
+			<txp:evaluate query='<txp:variable name="section_nb" /> > 1'><ul class="u tc cb">
+				<li class="h"><h4>Languages<i class="x">:</i></h4></li>
+				<li class="<txp:if_section name=',<txp:variable name="front" />'>a</txp:if_section>"><a href="<txp:site_url />"><txp:variable name="front" /></a></li>
+<txp:section_list exclude='<txp:variable name="front" />' sort="name asc" break=""><txp:evaluate query='string-length("<txp:section />") < 3'>
+				<li class="<txp:if_section name='<txp:section />'>a</txp:if_section>"><a href="<txp:site_url /><txp:section />"><txp:section escape="upper" /></a></li></txp:evaluate></txp:section_list>
+			</ul></txp:evaluate>
+
+<txp:output_form form='main_menu_<txp:if_section name=""><txp:variable name="front" /><txp:else /><txp:variable name="_lang" /></txp:if_section>' />
+
+		</section>
+
+	</header>
+
+	<main aria-label="<txp:text item="main_content" />" class="cb">
+
+		<section class="cf cb">
+
+			<div class="l v">
+				<div class="c">
+	<txp:article_custom limit="999" form="archives_list" section='<txp:variable name="_lang" />' month='<txp:php>
+/**
+ * Select year as a value for the 'month' attribute
+ */
+global $variable;
+
+if (null == gps('year')) {
+	// No query into the URL, choose the current year.
+	echo date('Y');
+} elseif ((int)gps('year') > (int)$variable['first_article']) {
+	// Keep the parameter into the query for a year that have articles.
+	echo gps('year');
+} else {
+	// The parameter exceed; stay in the current year.
+	echo gps('year');
+	// Depending of your MySQL version, uncomment below to display a final message for ending articles list
+	$variable['empty'] = 'n/a';
+}
+
+</txp:php>' wraptag="" break="" />
+
+<txp:evaluate test='<txp:variable name="empty" />'><txp:else /><ul style="margin-top:-1em"><li><txp:variable name="empty" /></li></ul></txp:evaluate>
+
+	
+
+	<p class="pg tc"><txp:php>
+/**
+ * Create pagination links with a year as a parameter
+ */
+global $variable;
+
+function _left($page) {
+	return '<a rel="prev" href="<txp:section />?year='.$page.'" data-instant><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><switch><g><path d="M15 18l-6-6 6-6"></path></g><foreignObject width="0" height="0" overflow="hidden">❮</foreignObject></switch></svg></a>';
+}
+
+function _right($page) {
+	return '<a rel="next" href="<txp:section />?year='.$page.'" data-instant><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><switch><g><path d="M9 18l6-6-6-6"></path></g><foreignObject width="0" height="0" overflow="hidden">❯</foreignObject></switch></svg></a>';
+}
+
+$total = (date('Y') - (int)$variable['first_article']) + 1;
+$page = '...';
+
+if (null == gps('year') and (trim($variable['first_article']) == date('Y'))) {
+	$page = 1;
+} elseif (null == gps('year') and (trim($variable['first_article']) < date('Y'))) {
+	echo _left((date('Y') - 1));
+	$page = 1;
+} elseif (gps('year') && gps('year') == trim($variable['first_article'])) {
+	echo _right(((int)gps('year') + 1));
+	$page = $total; // Final page
+} elseif (gps('year') && gps('year') == date('Y')) {
+	echo _left(((int)gps('year') - 1));
+	$page = 1; // First on return pages
+} elseif (gps('year') && gps('year') > trim($variable['first_article'])) {
+	echo _left(((int)gps('year') - 1)).' '._right(((int)gps('year') + 1));
+	$page = (int)date('Y') - (int)gps('year') + 1;
+} else {
+	echo _right(($variable['first_article'] + 1));
+}
+
+echo '</p><p class="pg tc">'.$page.' / '.$total.'</p>';
+
+</txp:php>
+
+				</div>
+			</div>
+		</section>
+
+<txp:if_article_list>
+
+	
+
+	
+
+</txp:if_article_list>
+
+	</main>
+
+
+	<a href="<txp:page_url />#" class="r cf" style="color:#fafafa"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><switch><g><path d="M12 19V6M5 12l7-7 7 7"></path></g><foreignObject width="0" height="0" overflow="hidden"><i class="ic" style="font-size:2em">⛢</i></foreignObject></switch></svg></a>
+
+
+<footer class="footer cf cb">
+
+	<hr />
+
+	<h4 class="h">Site footer<i class="x">:</i></h4>
+	<small class="tc">Copyright &copy; <txp:php>
+$first = date('Y', get_pref('dbupdatetime'));
+$now = date('Y');
+echo( ((int)$first < (int)$now ? $first.'-'.$now : $now) );
+</txp:php> <txp:site_name />, all rights reserved.</small>
+	<small class="cf">&nbsp;</small>
+
+</footer>
+
+</div>
+
+</body></html>

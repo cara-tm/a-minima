@@ -67,11 +67,12 @@ $_section = (strlen($pretext['s']) < 3) ? $pretext['s'] : $variable['_lang'];
 
 switch ($_section) {
 
-	case 'default':
+	case 'en':
 		$more = 'Read more';
 		$variable['published_on'] = 'Published on';
 		$variable['modified_on'] = 'Modified on';
 		$variable['author'] = 'Author';
+		$variable['comment'] = 'Comment via';
 		$variable['search'] = 'Write your search here';
 		$variable['tooltip'] = 'Write then press [Enter]';
 		$variable['search_title'] = 'Your Search Results';
@@ -81,6 +82,7 @@ switch ($_section) {
 		$variable['published_on'] = 'Publié le';
 		$variable['modified_on'] = 'modifié le';
 		$variable['author'] = 'Auteur';
+		$variable['comment'] = 'Commenter via';
 		$variable['search'] = 'Saisir votre recherche ici';
 		$variable['tooltip'] = 'Écrire puis touche [Entrée]';
 		$variable['search_title'] = 'Les résultats de votre recherche';
@@ -90,6 +92,7 @@ switch ($_section) {
 		$variable['published_on'] = 'Gepostet am';
 		$variable['modified_on'] = 'Modified on';
 		$variable['author'] = 'Autor';
+		$variable['comment'] = 'Comment via';
 		$variable['search'] = 'Schreiben Sie hier Ihre Suche';
 		$variable['tooltip'] = 'Schreiben Sie und [Enter]';
 		$variable['search_title'] = 'Your Search Results';
@@ -99,6 +102,7 @@ switch ($_section) {
 		$variable['published_on'] = 'Publicado en';
 		$variable['modified_on'] = 'Modified on';
 		$variable['author'] = 'Autor';
+		$variable['comment'] = 'Comment via';
 		$variable['search'] = 'Escribe tu búsqueda aquí';
 		$variable['tooltip'] = 'Escriba y luego presione [Entrar]';
 		$variable['search_title'] = 'Your Search Results';
@@ -113,6 +117,7 @@ switch ($_section) {
 		$variable['published_on'] = 'Published on';
 		$variable['modified_on'] = 'Modified on';
 		$variable['author'] = 'Author';
+		$variable['comment'] = 'Comment via';
 		$variable['search'] = 'Write your search here';
 		$variable['tooltip'] = 'Write then press [Enter]';
 		$variable['search_title'] = 'Your Search Results';

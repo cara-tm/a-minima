@@ -1,0 +1,9 @@
+<txp:hide>
+<txp:if_individual_article>
+	<txp:link_to_next wraptag='<link rel="next" href="<+>">' />
+	<txp:link_to_prev wraptag='<link rel="prev" href="<+>">' />
+<txp:else />
+	<txp:older wraptag='<link rel="next" href="<+>">' />
+	<txp:newer wraptag='<link rel="prev" href="<+>">' />
+</txp:if_individual_article>
+</txp:hide>

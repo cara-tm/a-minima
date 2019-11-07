@@ -1,0 +1,17 @@
+<txp:hide>
+Code by Oleg, source: https://forum.textpattern.com/viewtopic.php?id=49369&p=2
+</txp:hide>
+
+<txp:if_article_list>
+<txp:hide process="2">
+<txp:evaluate><link rel="prefetch" href="<txp:older />"></txp:evaluate>
+<txp:evaluate><link rel="prev" href="<txp:older />"></txp:evaluate>
+
+<txp:evaluate><link rel="prefetch" href="<txp:newer />"></txp:evaluate>
+<txp:evaluate><link rel="next" href="<txp:newer />"></txp:evaluate>
+</txp:hide>
+</txp:if_article_list>
+
+<txp:if_search_results min="5">
+		<txp::pages_pager />
+</txp:if_search_results>
