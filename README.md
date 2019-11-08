@@ -1,15 +1,15 @@
 # [\a mi.ni.ma\\]
 "_a simple Low Tech Blog theme for Textpattern CMS_"
 
-This theme tries to have less technological environment impacts: it uses a main dark color to reduice electric consomation on screens, no custom fonts but system ones instead, no social networks links, a recommandation to convert images to half tone versions (image files weight reduiced by half, never mind the formats), with native multilingual features without the help of plugins, Flexbox inside but with fallback for a pretty good cross-browsers support: Internet Explorer 7 minimum.
+This theme tries to have less technological environmental impacts: it uses a main dark color to reduce electric consumption on screens, no custom fonts but system ones instead, no social networks links, a recommendation to convert images to half tone versions (image files weight reduced by half, never mind the formats), with native multilingual features without the help of plugins, Flexbox inside but with fallback for a pretty good cross-browser support: Internet Explorer 7 minimum.
 
 ## How to install?
 
-Place this theme folder and its content into your `root/theme` repertory. Access to your Textpattern's administration interface, then choose the "Themes" panel, import the theme by selecting it into the list, finaly activate it.
+Place this theme folder and its content into your `root/theme` repertory. Access to your Textpattern's administration interface, then choose the "Themes" panel, import the theme by selecting it into the list, finally activate it.
 
 ## How to use the multilingual feature?
 
-Create sections with a **2 lowercase letters** as name for country codes and asign each to the `default` page template. Choose your main language by setting the page `On default page` (only one alowed). Publish some articles for each sections in the corresponding language.
+Create sections with a **2 lowercase letters** as name for country codes and assign each to the `default` page template. Choose your main language by setting the page `On default page` (only one allowed). Publish some articles for each section in the corresponding language.
 
 ## How to add other pages (displayed into the sub-menu)?
 
@@ -27,7 +27,7 @@ Check the `config` form to change the TXP variable according to your needs.
 
 ## Theme files
 
-All page templates and forms are provided in compact versions but into more human readable copies. 
+All page templates and forms are provided in compact versions but into more human readable copies.
 
 ## Images convertion
 
