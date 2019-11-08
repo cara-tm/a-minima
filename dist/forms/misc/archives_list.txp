@@ -1,10 +1,1 @@
-<txp:if_different>
-<h2 class="lr tc"><txp:posted format="%Y" /></h2>
-<ul>
-</txp:if_different>
-
-<li><h3 class=""><a href="<txp:permlink />"><txp:title /> (<txp:posted format="%d %m %Y" />)</a></h3></li>
-
-<txp:if_last_article>
-</ul>
-</txp:if_last_article>
+<txp:if_different><h2 class="lr tc"><txp:posted format="%Y" /></h2><ul></txp:if_different><txp:if_different><li><txp:posted format="%m.%Y" /></li></txp:if_different><ul><li><h3 class=""><a href="<txp:permlink />"><txp:title /> (<txp:posted format="%d/%m/%Y" />)</a></h3></li></ul><txp:if_last_article></ul></txp:if_last_article>

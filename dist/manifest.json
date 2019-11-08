@@ -1,7 +1,7 @@
 {
     "title": "a minima",
-    "version": "2.0",
-    "description": "Low Tech theme for Textpattern CMS",
+    "version": "3.0",
+    "description": "\"Low Tech\" blog theme for Textpattern CMS.",
     "author": "Patrick LEFEVRE",
     "author_uri": "https://github.com/cara-tm/a-minima",
     "txp-type": "textpattern-theme"
