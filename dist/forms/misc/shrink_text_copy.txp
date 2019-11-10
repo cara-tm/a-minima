@@ -4,25 +4,28 @@ global $pretext, $variable;
  * Strip a text in a number of plain words followed by hyphens
  */
 
-// Shrink text after how many words?
-$variable['length'] = 150;
-
 // Strip all HTML tags?
 $strip_html = true;
 
+if ($variable['no-tags'] == "1") {
+	$strip_html = true;
+}
 
 // Do not change anything below
 
 // Sanitize article.
 if (null != $variable['content']) {
 	$input = $variable['content'](array());
-	$length = $variable['length'];
 } else {
-	$length = 0;
-	$variable['content'] = null;
+	$out = '';
 }
 
 
+if (null != $variable['content']) {
+	$length = $variable['length'];
+} else {
+	$length = 0;
+}
 $tag = '';
 
 // Strip tags, if desired.
@@ -129,8 +132,6 @@ switch ($_section) {
 
 
 // Return
-if (null != $variable['content']) {
-	echo $out.' <br /><span class="m"><a href="'.permlink(array()).'/" class="d">'.$more.'</a>…</span>';
-}
+echo( ($out ? $out.' <br /><span class="m"><a href="'.permlink(array()).'/" class="d">'.$more.'</a>…</span>': '') );
 
 </txp:php>

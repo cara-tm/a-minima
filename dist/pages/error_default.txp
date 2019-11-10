@@ -2,7 +2,7 @@
 <txp:section_list limit="1" sort="on_frontpage desc" break=""><txp:evaluate query='string-length("<txp:section />") < 3'><txp:section /></txp:evaluate></txp:section_list>
 </txp:variable>
 
-<txp:section_list limit="10" break=""><txp:evaluate query='string-length("<txp:section />") < 3'><txp:evaluate query='<txp:variable name="section_nb" add />' /></txp:evaluate></txp:section_list>
+<txp:section_list limit="10" break=""><txp:evaluate query='string-length("<txp:section />") < 3'><txp:evaluate query='<txp:variable name="section_nb" escape="integer" add />' /></txp:evaluate></txp:section_list>
 
 <txp:variable name="_lang"><txp:if_section name=""><txp:variable name="front" /><txp:else /><txp:evaluate query='string-length("<txp:section />") < 3'><txp:section exclude='<txp:variable name="front" />' /><txp:else /><txp:article_custom section='<txp:section />' limit="1" status="sticky"><txp:body escape="p,lower,trim" /><txp:variable name="force" value='<txp:body escape="p,lower,trim" />' /></txp:article_custom></txp:evaluate></txp:if_section></txp:variable><!DOCTYPE html>
 <html lang="<txp:lang />" dir="<txp:text item="lang_dir" />" class="">

@@ -5,10 +5,10 @@ Set how many article cards to display on front pages:
 <txp:variable name="cards_nb" value="6" />
 
 <txp:hide>
-Set your Twitter account to allow comments (i.e. @jack), disabled if blank:
+Set you Twitter account to allow comments (i.e. @jack), desabled if blank:
 </txp:hide>
 
-<txp:variable name="twitter" value="@jack" />
+<txp:variable name="twitter" value="@lowel" />
 
 <txp:hide>
 Display a placeholder image for article cards with no pics (true or false)?
@@ -36,7 +36,7 @@ DO NOT CHANGE ANYTHING BELOW
 <txp:php>
 global $variable;
 /*!
- * Simple function to encode email address and others
+ * Simple function to encode email addresse and others
  *
  * @param  $e string
  * @return    string Link with encoded ASCII string
