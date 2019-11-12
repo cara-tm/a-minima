@@ -76,7 +76,9 @@ switch ($_section) {
 		$variable['tooltip'] = 'Write then press [Enter]';
 		$variable['search_title'] = 'Your Search Results';
 		$variable['no_results'] = 'Sorry, no results found…';
-		break;
+		$variable['no_tracking'] = 'This website do not track you and do not use any cookies';
+	break;
+
 	case 'fr':
 		$more = 'Lire la suite';
 		$variable['published_on'] = 'Publié le';
@@ -89,7 +91,9 @@ switch ($_section) {
 		$variable['tooltip'] = 'Écrire puis touche [Entrée]';
 		$variable['search_title'] = 'Les résultats de votre recherche';
 		$variable['no_results'] = 'Désolé, aucun résultat pour cette recherche…';
-		break;
+		$variable['no_tracking'] = 'Ce site ne vous espionne pas et n’utilise aucun cookie';
+	break;
+
 	case 'de':
 		$more = 'Weiterlesen';
 		$variable['published_on'] = 'Gepostet am';
@@ -102,7 +106,9 @@ switch ($_section) {
 		$variable['tooltip'] = 'Schreiben Sie und [Enter]';
 		$variable['search_title'] = 'Ihre Suchergebnisse';
 		$variable['no_results'] = 'Entschuldigung, keine Ergebnisse gefunden…';
-		break;
+		$variable['no_tracking'] = 'This website do not track you and do not use any cookies';
+	break;
+
 	case 'es':
 		$more = 'Lee mas';
 		$variable['published_on'] = 'Publicado en';
@@ -115,7 +121,9 @@ switch ($_section) {
 		$variable['tooltip'] = 'Escriba y luego presione [Entrar]';
 		$variable['search_title'] = 'Sus resultados de búsqueda';
 		$variable['no_results'] = 'Lo sentimos, no se encontraron resultados…';
-		break;
+		$variable['no_tracking'] = 'This website do not track you and do not use any cookies';
+	break;
+
 	case 'it':
 		$more = 'Leggi di più';
 		$variable['published_on'] = 'Pubblicato su';
@@ -128,7 +136,8 @@ switch ($_section) {
 		$variable['tooltip'] = 'Scrivi quindi premi [Invio]';
 		$variable['search_title'] = 'I tuoi risultati di ricerca';
 		$variable['no_results'] = 'Siamo spiacenti, nessun risultato trovato…';
-		break;
+		$variable['no_tracking'] = 'This website do not track you and do not use any cookies';
+	break;
 
 	default:
 		$more = 'Read more';
@@ -142,7 +151,8 @@ switch ($_section) {
 		$variable['tooltip'] = 'Write then press [Enter]';
 		$variable['search_title'] = 'Your Search Results';
 		$variable['no_results'] = 'Sorry, no results found…';
-		break;
+		$variable['no_tracking'] = 'This website do not track you and do not use any cookies';
+	break;
 
 }
 
