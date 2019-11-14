@@ -17,7 +17,7 @@ Create sections with a **2 lowercase letters** as name for country codes and ass
 
 Create all sections needed by assigning the `default` page template. Check the "Form" panel: you can find the `main_menu_en` (2 letters suffix) as a model. Adapt the `exclude` attribute into the `section_list` tag in order to remove the non corresponding sections for the current language.
 
-**You have to create a "fake" article for each pages with the 2 letters country code for body text in order to identify the language**. Set the status to `persistant`. Now, you can write an article for the page with a published status.
+**You have to create a "fake" article for each pages with the 2 letters country code for body text in order to identify the language**. Set the status to `persistant`. Now, you can write an **new** article for this page with a **published** status.
 
 ## How to add archive pages?
 
