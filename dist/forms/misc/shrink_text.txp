@@ -78,7 +78,6 @@ switch ($_section) {
 		$variable['no_results'] = 'Sorry, no results found…';
 		$variable['no_tracking'] = 'This website do not track you and do not use any cookies';
 	break;
-
 	case 'fr':
 		$more = 'Lire la suite';
 		$variable['published_on'] = 'Publié le';
@@ -93,7 +92,6 @@ switch ($_section) {
 		$variable['no_results'] = 'Désolé, aucun résultat pour cette recherche…';
 		$variable['no_tracking'] = 'Ce site ne vous espionne pas et n’utilise aucun cookie';
 	break;
-
 	case 'de':
 		$more = 'Weiterlesen';
 		$variable['published_on'] = 'Gepostet am';
@@ -108,7 +106,6 @@ switch ($_section) {
 		$variable['no_results'] = 'Entschuldigung, keine Ergebnisse gefunden…';
 		$variable['no_tracking'] = 'This website do not track you and do not use any cookies';
 	break;
-
 	case 'es':
 		$more = 'Lee mas';
 		$variable['published_on'] = 'Publicado en';
@@ -123,7 +120,6 @@ switch ($_section) {
 		$variable['no_results'] = 'Lo sentimos, no se encontraron resultados…';
 		$variable['no_tracking'] = 'This website do not track you and do not use any cookies';
 	break;
-
 	case 'it':
 		$more = 'Leggi di più';
 		$variable['published_on'] = 'Pubblicato su';
@@ -153,7 +149,6 @@ switch ($_section) {
 		$variable['no_results'] = 'Sorry, no results found…';
 		$variable['no_tracking'] = 'This website do not track you and do not use any cookies';
 	break;
-
 }
 
 
