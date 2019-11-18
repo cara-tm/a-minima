@@ -76,7 +76,7 @@
 	<hr />
 
 	<h4 class="h">Site footer<i class="x">:</i></h4>
-	<small class="tc">Copyright &copy; <txp:php>
+	<small class="tc">Copyright &copy;&nbsp;<txp:php>
 $first = date('Y', get_pref('dbupdatetime'));
 $now = date('Y');
 echo( ((int)$first < (int)$now ? $first.'-'.$now : $now) );
