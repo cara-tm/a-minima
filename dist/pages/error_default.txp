@@ -76,10 +76,12 @@
 	<hr />
 
 	<h4 class="h">Site footer<i class="x">:</i></h4>
-	<small class="tc">Copyright &copy;&nbsp;<txp:php>
-$first = date('Y', get_pref('dbupdatetime'));
+	<small class="tc">Copyright &copy;&nbsp;<txp:php> 
+
+$first = date('Y', get_pref('sql_now_created'));
 $now = date('Y');
-echo( ((int)$first < (int)$now ? $first.'-'.$now : $now) );
+echo( ($first < $now ? $first.'-'.$now : $now) );
+
 </txp:php> <txp:site_name />, all rights reserved. Published with Textpattern <txp:php>echo get_pref('version');</txp:php>.</small>
 	<small class="cf g"><txp:variable name="no_tracking" /></small>
 	<small class="cf">&nbsp;</small>
