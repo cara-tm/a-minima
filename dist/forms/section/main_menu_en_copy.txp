@@ -1,7 +1,0 @@
-			<nav class="r">
-				<ul>
-					<li class="h"><h4>Main Menu<i class="x">:</i></h4></li>
-					<txp:section_list exclude_default="1" exclude="a-propos,contact" sort="name asc" break=""><txp:evaluate query='string-length("<txp:section />") > 2'>
-					<li class="<txp:if_section name='<txp:section />'>a</txp:if_section>"><a href="<txp:site_url /><txp:section />"><txp:section title="1" /></a></li></txp:evaluate></txp:section_list>
-				</ul>
-			</nav>

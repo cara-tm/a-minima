@@ -7,7 +7,7 @@ This theme tries to have less technological environmental impacts: it uses a mai
 
 Place this theme folder and its content into your `root/theme` repertory. Access to your Textpattern's administration interface, then choose the "Themes" panel, import the theme by selecting it into the list, finally activate it.
 
-**Important note**: After installation, you'll can visit your public home page but you'll encourt errors messages for individual article display context. **It's normal**: due to multilingual feature, [\a mi.ni.ma\\] need a _special_ section (this one is the minimum required) to work (_even if you do not want to create a multilingual website_). Start to create an `en` section attached to the `default` page template and set it "On front page" (or rename the `articles` one), then associate your first article (or the default one shiped with the Textpattern distribution) to it. 
+**Important note**: After installation, you'll can visit your public home page but you'll encourt errors messages for individual article display context (seems never occurs with TXP 4.8 version). **It's normal**: due to multilingual feature, [\a mi.ni.ma\\] need a _special_ section (this one is the minimum required) to work (_even if you do not want to create a multilingual website_). Start to create an `en` section attached to the `default` page template and set it "On front page" (or rename the `articles` one), then associate your first article (or the default one shiped with the Textpattern distribution) to it. 
 
 ## How to use the multilingual feature?
 
